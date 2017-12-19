@@ -1,20 +1,21 @@
 import React from "react";
 import {connect} from "react-redux";
 import {increment, decrement} from "../actions";
+import {Button} from "reactstrap";
 
 class Buttons extends React.Component{
     render(){
         return (
             <div>
-                <button type="button"
+                <Button type="button"
                         onClick={this.props.onIncrement}>
                     +
-                </button>
+                </Button>
 
-                <button type="button"
+                <Button type="button"
                         onClick={this.props.onDecrement}>
                     -
-                </button>
+                </Button>
             </div>
         )
     }

@@ -7,6 +7,8 @@ const counterInitialState = {
 };
 
 const counter = (state = counterInitialState, action) => {
+
+    console.log(action.type);
     switch(action.type) {
         case INCREMENT:
             return Object.assign({}, state, {
