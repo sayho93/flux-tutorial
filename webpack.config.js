@@ -1,6 +1,9 @@
 module.exports = {
     entry: './src/index.js',
 
+
+    //TODO
+    //output, devServer 경로 이해
     output: {
         path: __dirname + '/public',
         filename: 'bundle.js'
