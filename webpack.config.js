@@ -11,7 +11,8 @@ module.exports = {
     devServer: {
         inline: true,
         port: 7777,
-        contentBase: __dirname + '/public'
+        contentBase: __dirname + '/public',
+        historyApiFallback: true
     },
 
     module:
@@ -26,10 +27,6 @@ module.exports = {
                     presets: ['es2015', 'stage-0', 'react']
                 }
             },
-            // {
-            //     test: /\.css$/,
-            //     loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
-            // },
             {
                 test: /\.css$/,
                 loader: "style-loader!css-loader"
