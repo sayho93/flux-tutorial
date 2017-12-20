@@ -34,11 +34,11 @@ class Login extends React.Component{
                         <h1 style={{color: 'white'}}>PickleCode</h1>
                         <InputGroup>
                             <InputGroupAddon>@</InputGroupAddon>
-                            <Input placeholder="아이디" onKeyPress={this._handleKeyPress}/>
+                            <Input placeholder="아이디" id="userId" onKeyPress={this._handleKeyPress}/>
                         </InputGroup>
                         <InputGroup>
                             <InputGroupAddon><FaPass/></InputGroupAddon>
-                            <Input type="password" placeholder="비밀번호" onKeyPress={this._handleKeyPress}/>
+                            <Input type="password" id="userPwd" placeholder="비밀번호" onKeyPress={this._handleKeyPress}/>
                         </InputGroup>
                         <Center>
                             <Button color="white" style={{marginTop: 20}}
@@ -54,7 +54,15 @@ class Login extends React.Component{
     }
 
     onLogin(){
-        alert("login clicked");
+        let id = document.getElementById("userId").value;
+        let pass = document.getElementById("userPwd").value;
+
+        if(id.length === 0)
+            alert("아이디를 입력해 주세요");
+        if(pass.length === 0)
+            alert("비밀번호를 입력해 주세요");
+
+        location.href="/home";
     }
 }
 

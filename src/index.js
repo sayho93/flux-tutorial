@@ -6,6 +6,7 @@ import { Switch, Router, Route, IndexRoute, browserHistory } from 'react-router'
 import App from "./components/App";
 import Home from "./components/Home";
 
+const appElement = document.getElementById("app");
 // import {createStore} from "redux";
 // import {Provider} from "react-redux";
 // import counterApp from "./reducers";
@@ -21,8 +22,6 @@ import Home from "./components/Home";
 //     appElement
 // );
 
-{/*<Route path="home" component={Home}/>*/}
-const appElement = document.getElementById("app");
 ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={App} />
